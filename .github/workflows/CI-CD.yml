@@ -16,7 +16,7 @@ jobs:
 
       - name: Vet
         run: |
-          go vet ./.. 
+          go vet ./.
   deploy: 
     name: push to dockerHub if tags exist
     runs-on: ubuntu-latest
