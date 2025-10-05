@@ -12,11 +12,11 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Run tests
-        run: GOOS=linux GOARCH=amd64 go test
+        run: GOOS=linux GOARCH=amd64 go test .
 
       - name: Vet
         run: |
-          go vet ./..
+          go vet ./.
   deploy: 
     name: push to dockerHub if tags exist
     runs-on: ubuntu-latest
