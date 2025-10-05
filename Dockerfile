@@ -1,5 +1,4 @@
-FROM golang:1.24.1 AS builder
-
+FROM golang:1.24.1 AS builder  //привет для ревью!
 WORKDIR /app
 COPY go.mod go.sum ./
 RUN go mod download
@@ -12,4 +11,4 @@ WORKDIR /app
 COPY --from=builder /main /app/main
 COPY tracker.db /app/tracker.db
 
-CMD ["/app/main"]
+CMD ["/app/main"] 
